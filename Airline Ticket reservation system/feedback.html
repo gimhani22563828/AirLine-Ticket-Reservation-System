@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/fb70ce88c3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style/Feedback.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="image/m.webp">
+            </div>
+            <nav>
+                
+              <a href="home.php"><b>Home</b></a>
+
+              <div class="dropdown">
+                  <button class="dropbtn"><b>Plan & Book</b>
+                      <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                      <a href="manage my booking.php">Manage My Booking </a>
+                      <a href="ticket details.html">Ticket Details</a>
+                      <a href="latest deals.html">Latest Deals</a>
+                      <a href="payment.php">Payment</a>
+                      <a href="Refund.php">Online Refund request</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button class="dropbtn"><b>Travel Information</b>
+                      <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                      <a href="covid 19 update.html">Covid 19 Updates </a>
+                      <a href="baggage.html">Baggage Allowance</a>
+                      <a href="requirement.php">Special Requirment</a>
+                      <a href="visa  & passport.html">Visa & passport Requirment</a>
+                  </div>
+              </div>
+
+
+              <div class="dropdown">
+                  <button class="dropbtn"><b>Experience</b>
+                      <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                      <a href="economy class.html">Economy class </a>
+                      <a href="bussiness class.html">Business Class</a>
+                      <a href="entertaintment.html">Entertainment</a>
+                      <a href="feedback.html">Feedback</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button class="dropbtn"><b>Flysmiles</b>
+                      <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                      <a href="contact.html">Contact</a>
+                      <a href="privacy policy.html">Privacy Policy</a>
+                      <a href="recommandation.html">Recommendation</a>
+                  </div>
+              </div>
+
+              <a href="login.php"><i class="fa fa-fw fa-user"></i> Login </a>
+                </nav>
+             </div>
+             </header>
+			 <img src = "image/CabinCrew-Page.png">
+
+                <hr1>
+                  <br><br><br><br><br><br><br><br><br><br>
+                <h3>We would like to express our sincere gratitude to all our passengers. Your support and patronage are invaluable to us.
+                     We would greatly appreciate it if you could spare a moment to provide us with your valuable feedback by filling out our feedback form. 
+                     Your input is essential to helping us improve our services and ensure that we meet your expectations.<br><br>
+                     Thank you</h3>
+
+
+          
+                
+            <br><br><br><br>
+                <section class="feedback-section">
+                <h1>Feedback Form</h1>
+              <form id="feedbackForm">
+
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name" required><br><br>
+        
+              <label for="email">Email:</label><br>
+              <input type="text" id="email" name="email" required><br><br>
+        
+              <label for="phone_number">Phone Number:</label><br>
+              <input type="text" id="phone_number" name="phone_number" required><br><br>
+        
+              <label for="message">Message:</label><br>
+              <textarea id="message" name="message" required></textarea><br><br>
+        
+              <button id="submit" type="submit">Submit</button>
+
+              </form>
+            <div id="successMessage" class="success-message" style="display: none;">
+              Thank you for your feedback!
+            </div>
+        </section>
+        <script>
+
+             document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+              event.preventDefault(); 
+        
+             
+              var name = document.getElementById("name").value;
+              var email = document.getElementById("email").value;
+              var phone_number = document.getElementById("phone_number").value;
+              var message = document.getElementById("message").value;
+        
+              if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+                alert("Please fill in all fields.");
+                return;
+              }
+        
+              
+              document.getElementById("name").disabled = true;
+              document.getElementById("email").disabled = true;
+              document.getElementById("phone_number").disabled = true;
+              document.getElementById("message").disabled = true;
+              document.getElementById("submit").disabled = true;
+        
+              document.getElementById("successMessage").style.display = "block";
+              document.getElementById("feedbackForm").reset();
+              setTimeout(function() {
+                document.getElementById("successMessage").style.display = "none";
+                document.getElementById("name").disabled = false;
+                document.getElementById("email").disabled = false;
+                document.getElementById("phone_number").disabled = false;
+                document.getElementById("message").disabled = false;
+                document.getElementById("submit").disabled = false;
+              }, 5000);
+            });
+          </script>
+        
+        <br><br>
+        <hr>
+
+         <footer>
+        <div class="row"> 
+          <div class="col">
+              <img src="image/m.webp"class=" logo">
+              <br>
+              <p1>"Fly high with our unbeatable airfare deals and seamless ticket reservation. Discover the world with Air Line Ticket Reservation!"</p1>
+          </div>
+          <div class="col">
+              <h3> WING AIRLINE <div class="underline"><span></span></div></h3>
+              <p1>No.123,Kandy Road</p1>
+              <p1>Malabe,Srilanka</p1>
+              <p1 class="email-id">wingairlineairline@gmail.com</p1>
+              <p1>+94-112564285</p1>
+          </div>
+          <div class="col">
+              <h3>Links<div class="underline"><span></span></div></h3>
+              <ul>
+                <b><li><a href="home.php">Home</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="privacy policy.html">Privacy Policy</a></li>
+                  <li><a href="feedback.html">Feedback</a></li></b>
+              </ul>
+          </div>
+          <div class="col">
+              <h3>Newsletter<div class="underline"><span></span></div></h3>
+              <form>
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="email" placeholder="Enter your email-id" required>
+                  <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+              </form>
+              <div class="social-icons">
+                         
+                  <a href="https://www.facebook.com/flysrilankan/"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.youtube.com/channel/UCU_e10UGVQS8JikgDpwvdag"><i class="fa-brands fa-youtube"></i></a>
+                  <a href="https://twitter.com/flysrilankan?lang=en#:~:text=SriLankan%20Airlines%20(%40flysrilankan)%20%2F%20Twitter"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/srilankanairlinesofficial/?hl=en#:~:text=SriLankan%20Airlines%20(%40srilankanairlinesofficial)%20%E2%80%A2%20Instagram%20photos%20and%20videos"><i class="fa-brands fa-instagram"></i></a>
+              </div>    
+          </div>
+      </div>
+      <br><br>
+
+      <hr>
+      <p class="copyright">WING AIRLINE(MLB_16.01_12)  © 2023-All Right Reserved</p>
+      </footer>
+    </body>
+</html>           
